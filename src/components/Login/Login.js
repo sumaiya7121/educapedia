@@ -1,17 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import GoogleIcon from "../../assets/images/icons/icons8-google-48.png";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FacebookIcon from "../../assets/images/icons/icons8-facebook-48.png";
+import GoogleIcon from "../../assets/images/icons/icons8-google-48.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Login = () => {
-  const handleSubmit = (event) => {};
-  const handleGoogleLogIn = () => {};
-  const handleFacebookLogIn = () => {};
+  const { googleSignIn, facebookSignIn, logInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const [error, setError] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    logInUser(email, password)
+      .then((result) => {
+        setError("");
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+        form.reset();
+      })
+      .catch((error) => setError(error.message));
+  };
+
+  const handleGoogleLogIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+        console.log(user);
+      })
+      .catch((error) => setError(error.message));
+  };
+  const handleFacebookLogIn = () => {
+    facebookSignIn()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+        console.log(user);
+      })
+      .catch((error) => setError(error.message));
+  };
   return (
     <div className="min-h-screen mt-14">
-      <div className="border border-gray-500 w-4/12 mx-auto rounded-xl py-20">
+      <div className="border border-gray-500 w-11/12 lg:w-4/12 mx-auto rounded-xl py-20">
         <h2 className="text-3xl font-semibold mb-5">Login</h2>
-        {/* <p className="text-red-500 mb-5">{error.slice(10, 300)}</p> */}
+        <p className="text-red-500 mb-5">{error.slice(10, 300)}</p>
         <form onSubmit={handleSubmit} className="w-9/12 mx-auto">
           <div className="inputGroup ">
             <input
@@ -42,7 +79,7 @@ const Login = () => {
               </Link>
             </div>
           </div>
-          <button className="btn btn-primary w-full mt-10 ">Login</button>
+          <button className="bg-purple-900 px-7 py-3 text-white hover:amber-600 rounded-md w-full mt-10 ">Login</button>
           <h4 className="my-10">
             Don't have an account?{" "}
             <Link to="/register" className="underline">
@@ -71,5 +108,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;

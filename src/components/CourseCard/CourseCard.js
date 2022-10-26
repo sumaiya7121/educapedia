@@ -18,6 +18,7 @@ const CourseCard = ({ course }) => {
   return (
     <Link className="w-full" to={`/courses/${id}`}>
     
+  
       <div className="hover:text-amber-600 duration-500">
         <div className="card w-full lg:w-10/12 mx-auto bg-base-100 shadow-xl border-amber-600 border">
           <div className="w-24 h-7 absolute top-6 left-[370px] text-white bg-amber-500 flex items-center justify-center text-lg rounded-full">

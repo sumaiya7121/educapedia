@@ -4,6 +4,7 @@ import React from "react";
 
 const ReactToPDFDownloader = ({ roofElementId, downloadFileName }) => {
   const downloadFileDocument = () => {
+    console.log('click')
     const input = document.getElementById(roofElementId);
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");

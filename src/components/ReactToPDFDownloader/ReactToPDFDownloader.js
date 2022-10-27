@@ -9,7 +9,7 @@ const ReactToPDFDownloader = ({ roofElementId, downloadFileName }) => {
     const input = document.getElementById(roofElementId);
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "pt", "a2");
+      const pdf = new jsPDF("p", "pt", "a3");
       pdf.addImage(imgData, "JPEG", 0, 0);
       pdf.save(`${downloadFileName}`);
     });

@@ -24,11 +24,13 @@ const SelectedCourse = () => {
     timeDuration,
   } = selectedCourse;
   return (
-    <div id='roofElementId' className="">
-            <ReactToPDFDownloader>
-          roofElementId="pageToDownload"
-          downloadFileName={courseName}
-        </ReactToPDFDownloader>
+    <div className="" id="pagetodownload">
+      
+                <ReactToPDFDownloader
+          roofElementId="pagetodownload"
+          downloadFileName={courseName}/>
+   
+       
       <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-x-4 container mx-auto mb-32 mt-10">
         <div className="col-span-3">
           <div className="card card-compact mx-auto bg-base-100 shadow-xl mt-10">
@@ -87,8 +89,10 @@ const SelectedCourse = () => {
         </div>
         <div className="lg:p-10 w-11/12 mx-auto lg:mt-0 mt-10 border shadow-2xl rounded-lg bg-amber-200">
           <div>
+
   
             <p className="text-3xl font-bold mt-10 text-center ml-5 text-amber-700">Price is only ${price}</p>
+            <p className="mt-3 text-amber-700 text-2xl">For purchasing this course Please Log in/Register</p>
             <Link to={`/purchase/${id}`}>
               <button className="bg-purple-900 text-white font-bold hover:bg-amber-600 rounded-lg px-10 py-3 mt-10">
                 Purchase

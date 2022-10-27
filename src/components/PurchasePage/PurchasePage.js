@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { FaClock, FaRegStickyNote, FaStar, FaUser } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
-import ReactToPDFDownloader from "../ReactToPDFDownloader/ReactToPDFDownloader";
 
 const PurchasePage = () => {
   const { user } = useContext(AuthContext);
@@ -11,18 +10,16 @@ const PurchasePage = () => {
     courseName,
     price,
     courseImage,
-    instractorImage,
+ 
     instractorName,
     student,
     lessons,
     timeDuration,
   } = purchasedCourse;
   return (
-    <div className="min-h-screen">
-          <ReactToPDFDownloader>
-          roofElementId="pageToDownload"
-          downloadFileName={courseName}
-        </ReactToPDFDownloader>
+    <div className="min-h-screen" >
+      
+       
       <div className="w-11/12 mx-auto">
         <h4 className="text-xl font-bold mt-10 text-amber-600">
           Congratulations! {user?.displayName}
@@ -97,6 +94,7 @@ const PurchasePage = () => {
           </div>
         </div>
       </div>
+  
     </div>
   );
 };

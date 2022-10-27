@@ -16,8 +16,10 @@ const CourseCard = ({ course }) => {
   } = course;
   console.log(course);
   return (
-    <Link className="w-full" to={`/courses/${id}`}>
-    
+
+     <Link className="w-full" to={`/courses/${id}` }>
+      
+  
   
       <div className="hover:text-amber-600 duration-500">
         <div className="card w-full lg:w-10/12 mx-auto bg-base-100 shadow-xl border-amber-600 border">
@@ -86,6 +88,9 @@ const CourseCard = ({ course }) => {
       
       </div>
     </Link>
+
+
+ 
   );
 };
 

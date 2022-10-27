@@ -7,7 +7,7 @@ const Courses = () => {
   const courses = useLoaderData();
   return (
     <div className="min-h-screen">
-     
+
       <h2 className="text-3xl mt-10 font-bold text-purple-900 hover:text-amber-600">All Courses</h2>
       <div className="grid lg:grid-cols-4 grid-cols-1 mt-10 w-10/12 mx-auto">
         <div className="col-span-3">

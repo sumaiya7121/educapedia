@@ -6,10 +6,10 @@ const Blog = () => {
       <h2 className="text-2xl font-bold mt-10">Blogs</h2>
       <div className="collapse w-11/12 lg:w-1/2 mx-auto my-10 rounded-xl">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title uppercase bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title uppercase bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           what is cors?
         </div>
-        <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-content bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <p>
             Cross-Origin Resource Sharing (CORS) Cross-Origin Resource Sharing
             (CORS) is an HTTP-header based mechanism that allows a server to
@@ -25,7 +25,7 @@ const Blog = () => {
       </div>
       <div className="collapse w-11/12 lg:w-1/2 mx-auto my-10 rounded-xl">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title uppercase bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title uppercase bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           Why are you using firebase? What other options do you have to
           implement authentication?
         </div>
@@ -49,10 +49,10 @@ const Blog = () => {
       </div>
       <div className="collapse w-11/12 lg:w-1/2 mx-auto my-10 rounded-xl">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title uppercase bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title uppercase bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           How does the private route work?
         </div>
-        <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-content bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <p>
             The private route component is similar to the public route, the only
             change is that redirect URL and authenticate condition. If the user
@@ -64,7 +64,7 @@ const Blog = () => {
       </div>
       <div className="collapse w-11/12 lg:w-1/2 mx-auto my-10 rounded-xl">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title uppercase bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title uppercase bg-purple-800 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           What is Node? How does Node work?
         </div>
         <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">

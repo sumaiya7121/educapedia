@@ -24,13 +24,13 @@ const PurchasePage = () => {
           downloadFileName={courseName}
         </ReactToPDFDownloader>
       <div className="w-11/12 mx-auto">
-        <h4 className="text-xl font-bold mt-10">
+        <h4 className="text-xl font-bold mt-10 text-amber-600">
           Congratulations! {user?.displayName}
         </h4>
-        <h2 className="text-2xl font-bold mt-5">
+        <h2 className="text-2xl font-bold mt-5 text-amber-600">
           Your are purchased {courseName} Course
         </h2>
-        <p className="text-md mt-5 font-bold">
+        <p className="text-md mt-5 font-bold text-amber-600">
           you have all access on this course for lifetime
         </p>
       </div>
@@ -49,12 +49,8 @@ const PurchasePage = () => {
             </figure>
             <div className="flex items-center  text-lg justify-between w-11/12">
               <div className="flex items-center justify-center text-lg">
-                <img
-                  className="w-10 rounded-full ml-8 mt-5"
-                  src={instractorImage}
-                  alt=""
-                />
-                <p className="mt-5 ml-3">{instractorName}</p>
+               
+                <p className="mt-5 ml-3"><h2 className="text-amber-600 font-bold">Instractor Name:</h2> {instractorName}</p>
               </div>
               <div className="flex items-center justify-center text-lg mt-5">
                 <span>
@@ -80,7 +76,7 @@ const PurchasePage = () => {
               </div>
             </div>
             <div className="card-body text-left">
-              <h2 className="text-center text-xl font-bold">{courseName}</h2>
+              <h2 className="text-center text-xl font-bold text-amber-600">{courseName}</h2>
 
               <div className="divider"></div>
               <div className="flex justify-center items-center">

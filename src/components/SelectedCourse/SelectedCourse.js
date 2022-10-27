@@ -8,7 +8,6 @@ import {
   FaVideo
 } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
-import WelcomeVideo from "../../assets/videos/welcome_video.mp4";
 import ReactToPDFDownloader from "../ReactToPDFDownloader/ReactToPDFDownloader";
 
 const SelectedCourse = () => {
@@ -25,7 +24,7 @@ const SelectedCourse = () => {
     timeDuration,
   } = selectedCourse;
   return (
-    <div className="">
+    <div id='roofElementId' className="">
             <ReactToPDFDownloader>
           roofElementId="pageToDownload"
           downloadFileName={courseName}
@@ -86,17 +85,13 @@ const SelectedCourse = () => {
             </div>
           </div>
         </div>
-        <div className="lg:p-10 w-11/12 mx-auto lg:mt-0 mt-10 border shadow-md rounded-lg">
+        <div className="lg:p-10 w-11/12 mx-auto lg:mt-0 mt-10 border shadow-2xl rounded-lg bg-amber-200">
           <div>
-            <video
-              className="w-full rounded-lg"
-              src={WelcomeVideo}
-              controls
-            ></video>
-            <p className="text-3xl font-bold mt-10 text-left ml-5">${price}</p>
+  
+            <p className="text-3xl font-bold mt-10 text-center ml-5 text-amber-700">Price is only ${price}</p>
             <Link to={`/purchase/${id}`}>
-              <button className="btn btn-primary btn-block mt-10">
-                purchase
+              <button className="bg-purple-900 text-white font-bold hover:bg-amber-600 rounded-lg px-10 py-3 mt-10">
+                Purchase
               </button>
             </Link>
           </div>
